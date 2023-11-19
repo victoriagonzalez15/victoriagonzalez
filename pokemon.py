@@ -1,4 +1,4 @@
-from lista_lista import Lista
+#from lista_lista import Lista
 from random import randint
 
 
@@ -65,8 +65,8 @@ pokemons = [
 ]
 
 # Asignar aleatoriamente los Pokémon a los entrenadores
-for pokemon in pokemons:
-    numero_entrenador = randint(0, lista_entrenadores.size() - 1)
+for pokemon in pokemons: #recorremos la lista de pokemons
+    numero_entrenador = randint(0, lista_entrenadores.size() - 1) #se elegi aleatoriamente un indice de entrenaador usando radintin
     entrenador = lista_entrenadores.get_element_by_index(numero_entrenador)
     entrenador[1].insert(pokemon, "nombre")
 
@@ -75,13 +75,13 @@ lista_entrenadores.barrido_entrenadores()
 
 # a- cantidad de pokemon de los entrenadores
 
-posicion = lista_entrenadores.search("Maria", "nombre")
+posicion = lista_entrenadores.search("Maria", "nombre") # se busca el indice del entrenador con el nombre maria 
 if posicion is not None:
-    entrenador, sublista = lista_entrenadores.get_element_by_index(posicion)
-    cantidad_pokemons = sublista.size()
+    entrenador, sublista = lista_entrenadores.get_element_by_index(posicion)#obtiene al entrenador y su lista de pokemones
+    cantidad_pokemons = sublista.size() #se obtine la cantidad de pokemones
     print(f"{entrenador.nombre} tiene {cantidad_pokemons} pokemons")
 else:
-    print(f"no se encontro al entrenador")
+    print(f"no se encontro al entrenador")# se muestra la inf
 
 
 # b-listar entrenadores que ganaron mas de tres torneos

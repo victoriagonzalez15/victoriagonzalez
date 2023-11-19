@@ -39,12 +39,12 @@ cola_personajes.arrive({"nombre": "Scott Lang", "superheroe": "At-man", "genero"
 # a. determinar el nombre del personaje de la superhéroe Capitana Marvel;
 nombre_capitana_marvel = "nombre"
 for personaje in cola_personajes._elementos:
-    if personaje["superheroe"] == "Capitana Marvel":
+    if personaje["superheroe"] == "Capitana Marvel": #si el superhéroe del personaje es igual a Capitana Marvel.
         nombre_capitana_marvel = personaje["nombre"]
         break
 print("el nombre de la Capitana Marvel es:", nombre_capitana_marvel)
 # b. mostrar los nombre de los superhéroes femeninos;
-super_heroes_femenino = []
+super_heroes_femenino = [] #se crea una lista vacia para almacenar los superheroes femeninos
 for personaje in cola_personajes._elementos:
     if personaje["genero"] == "F":
         super_heroes_femenino.append(personaje["superheroe"])
